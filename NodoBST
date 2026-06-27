@@ -1,0 +1,11 @@
+public class NodoBST {
+    Pedidos dato;
+    NodoBST izquierda;
+    NodoBST derecha;
+    
+    public NodoBST(Pedidos dato){
+        this.dato = dato;
+        this.izquierda = null;
+        this.derecha = null;
+    }
+}
