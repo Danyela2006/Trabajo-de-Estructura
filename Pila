@@ -1,0 +1,8 @@
+public class Pila {
+    public interface pila<A>{
+        void apilar(A elemento);
+        A desapilar();
+        A cima();
+        boolean estaVacia();
+    }
+}
