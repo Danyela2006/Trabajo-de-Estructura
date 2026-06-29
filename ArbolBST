@@ -1,0 +1,71 @@
+public class ArbolBST {
+    private NodoBST raiz;
+    
+    public ArbolBST(){
+        raiz = null;
+    }
+    
+    public boolean esVacio(){
+        return raiz == null;
+    }
+    
+    public void insertar(Pedidos pedido){
+        raiz = insertarRecursivo(raiz, pedido);
+    }
+    
+    private NodoBST insertarRecursivo(NodoBST actual, Pedidos pedido){
+        if(actual == null){
+            return new NodoBST(pedido);
+        }
+        if (pedido.getCodUnico()<actual.dato.getCodUnico()){
+            actual.izquierda = insertarRecursivo(actual.izquierda, pedido);
+        }else{
+            if(pedido.getCodUnico() > actual.dato.getCodUnico()){
+                actual.derecha = insertarRecursivo(actual.derecha, pedido);
+            }
+        }
+        return actual;
+        }
+    public Pedidos buscar(int codigo){
+        return buscarRecursivo(raiz, codigo);
+        
+    }
+    private Pedidos buscarRecursivo(NodoBST actual, int codigo){
+        if (actual == null){
+            return null;
+        }
+        
+        if (codigo == actual.dato.getCodUnico()){
+            return actual.dato;
+        }
+        
+        if(codigo < actual.dato.getCodUnico()){
+            return buscarRecursivo(actual.izquierda, codigo);
+        }
+        return buscarRecursivo(actual.derecha, codigo);
+        
+    }
+    
+    public void eliminar(int codigo){
+        raiz = eliminarRecursivo(raiz, codigo);
+    }
+    
+    private NodoBST eliminarRecursivo(NodoBST actual, int codigo){
+        if(actual == null){
+            return null;
+        }
+        
+        //seguir con eliminar Recursivo
+        
+        return null;
+        
+    }
+    private Pedidos encontrarMenor(NodoBST actual){
+        while(actual.izquierda != null){
+            actual = actual.izquierda;
+        }
+        return actual.dato;
+    }
+    //seguir aqui (no se me ocurre como seguir con lo del in pre post orden y :v
+    //              de forma recursiva :v)
+}
