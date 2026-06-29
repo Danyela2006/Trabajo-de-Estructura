@@ -1,0 +1,44 @@
+import java.util.LinkedList;
+public class Cola<A> {
+    private LinkedList<A> elementos;
+    
+    public Cola(){
+        elementos = new LinkedList<>();
+    }
+    
+    public void encolar(A elemento){
+        elementos.addLast(elemento);
+    }
+    
+    public A desencolar(){
+        if(estaVacia()){
+            throw new IllegalStateException("La cola esta vacia");
+        }
+        return elementos.removeFirst();
+        
+    }
+    public boolean estaVacia(){
+        return elementos.isEmpty();
+    }
+    
+    public int tamano(){
+        return elementos.size();
+        
+    }
+    public void limpiar(){
+        elementos.clear();
+        
+    }
+    public String mostrar(){
+        if(estaVacia()){
+            return"No hay pedidos en la cola.";
+            
+        }
+        String texto = "";
+        
+        for (A elemento : elementos){
+            texto = texto + elemento + "\n";
+        }
+      return texto;
+    }
+}
