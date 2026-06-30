@@ -1,2 +1,5 @@
 # Trabajo-de-Estructura
-Repositorio Git para el trabajo
+Sistema de Gestión Logística para Distribución de Medicamentos Críticos
+La finalidad de este proyecto es crear una aplicacion usando el lenguaje de programacion Java con la finalidad de crear una aplicacion con la funcion de gestionar de manera eficiente un sistema de distribucion de medicamentos donde se puedan registrar pedidos por un sistema de identificación, niveles de prioridad, fecha de ingreso y fecha limite del pedido, tipo de medicamento, nombre y tipo de institucion medica a donde sera transportado el medicamento y su encargado de transportarlos. Logrando así un sistema eficiente y simple.
+En este proyecto para lograr la funcion principal se hizo uso de arboles binarios y arboles balanzeados para poder ordenar los pedidos por nivel de prioridad, colas, pilas y listas para guardar editar y eliminar los pedidos y un menu simple de ingreso de pedidos.
+Para la creacion de este proyecto se uso el programa ApacheNetbeans el cual funciona con el lenguaje de programacion Java.
